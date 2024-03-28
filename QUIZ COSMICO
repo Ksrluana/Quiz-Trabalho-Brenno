@@ -1,0 +1,335 @@
+public class Cabecalho {
+
+    public static String Faculdade = "";
+    public static String Aluno = "";
+    public static String Professor = "";
+    public static String Disciplina = "";
+    public static String Inicio = "";
+
+    public static void escrevaCabecalho(){
+
+        System.out.println(Cabecalho.Faculdade);
+        System.out.println(Cabecalho.Aluno);
+        System.out.println(Cabecalho.Professor);
+        System.out.println(Cabecalho.Disciplina);
+        System.out.println(Cabecalho.Inicio);
+
+    }
+
+}
+public class questoes {
+    String questoes;
+    String questaoes = "";
+    String A = "";
+    String B = "";
+    String C = "";
+    String D = "";
+    String E = "";
+    String correta = "";
+
+
+    public void escrevaquestao (){
+        System.out.println(this.questaoes);
+        System.out.println(this.questoes);
+        System.out.println(this.A);
+        System.out.println(this.B);
+        System.out.println(this.C);
+        System.out.println(this.D);
+        System.out.println(this.E);
+        System.out.println(this.correta);
+    }
+
+    public boolean iscorreta(String resposta){
+        if (resposta.equalsIgnoreCase(this.correta)){
+            System.out.println("RESPOSTA CORRETA!");
+            return true;
+        }
+        else
+            System.out.println("RESPOSTA ERRADA!");
+        System.out.println("A ALTERNATIVA CORRETA E A: " + this.correta);
+        return false;
+    }
+}
+import java.util.Scanner;
+public class QuiZ {
+    /**
+     * @param args
+     */
+    public static void main(String [] args){
+        try (Scanner sc = new Scanner(System.in)) {
+            int acertos = 0;
+
+            Cabecalho.Faculdade = "Faculdade: Faculdade Alfredo Nasser";
+            Cabecalho.Aluno = "Aluno: Luana Kesia Silva Ribeiro";
+            Cabecalho.Professor = "Professor: Brenno Pimenta";
+            Cabecalho.Disciplina = "Disciplina: Algoritmo e Programaçao II";
+            Cabecalho.Inicio = "Bem Vindo ao Quiz!";
+            Cabecalho.escrevaCabecalho();
+
+            questoes questoes1 = new questoes();
+            questoes1.questoes = "1- Qual é o planeta mais próximo do Sol?";
+            questoes1.A = "A) Marte";
+            questoes1.B = "B) Vênus";
+            questoes1.C = "C) Mercúrio";
+            questoes1.D = "D) Júpiter";
+            questoes1.E = "E) Saturno";
+            questoes1.escrevaquestao();
+            questoes1.correta = "C";
+            System.out.println("Digite a alternativa correta: ");
+            String resposta = (String) sc.nextLine();
+            if (questoes1.iscorreta(resposta)){
+                acertos = acertos+1;
+            }
+
+            System.out.println("====================================================================== ");
+            questoes questoes2 = new questoes();
+            questoes2.questoes = "2- Qual ultimo placar do jogo do Brasil?";
+            questoes2.A = "A) Proxima Centauri";
+            questoes2.B = "B) Alfa Centauri A";
+            questoes2.C = "C) Sirius";
+            questoes2.D = "D) Betelgeuse";
+            questoes2.E = "E) Vega";
+            questoes2.escrevaquestao();
+            questoes2.correta = "A";
+            System.out.println("Digite a alternativa correta: ");
+            resposta = (String) sc.nextLine();
+            if (questoes2.iscorreta(resposta)){
+                acertos = acertos+1;
+            }
+            System.out.println("ACERTOS: "+acertos);
+
+            System.out.println("====================================================================== ");
+            questoes questoes3 = new questoes();
+            questoes3.questoes = "3- Qual é a teoria atualmente aceita sobre a formação do universo?";
+            questoes3.A = "A) Teoria do Estado Estacionário";
+            questoes3.C = "C) Teoria do Universo Oscilante";
+            questoes3.D = "D) Teoria da Criação Divina";
+            questoes3.E = "E) Teoria da Terra Plana";
+            questoes3.escrevaquestao();
+            questoes3.correta = "A";
+            System.out.println("Digite a alternativa correta: ");
+            resposta = (String) sc.nextLine();
+            if (questoes3.iscorreta(resposta)){
+                acertos = acertos+1;
+            }
+
+            System.out.println("ACERTOS: "+acertos);
+
+            System.out.println("====================================================================== ");
+            questoes questoes4 = new questoes();
+            questoes4.questoes = "4- Qual é o maior satélite natural do sistema solar?";
+            questoes4.A = "A) Lua";
+            questoes4.B = "B) Io";
+            questoes4.C = "C) Titã";
+            questoes4.D = "D) Europa";
+            questoes4.E = "E) Ganímedes";
+            questoes4.escrevaquestao();
+            questoes4.correta = "E";
+            System.out.println("Digite a alternativa correta: ");
+            resposta = (String) sc.nextLine();
+            if (questoes4.iscorreta(resposta)){
+                acertos = acertos+1;
+            }
+
+            System.out.println("ACERTOS: "+acertos);
+
+            System.out.println("====================================================================== ");
+            questoes questoes5 = new questoes();
+            questoes5.questoes = "5- O que é um buraco negro“?";
+            questoes5.A = "A) Uma estrela em colapso";
+            questoes5.B = "B) Um tipo de galáxia";
+            questoes5.C = "C) Um planeta sem atmosfera";
+            questoes5.D = "D) Um cometa desintegrado";
+            questoes5.E = "E) Uma estrela que explodiu";
+            questoes5.escrevaquestao();
+            questoes5.correta = "A";
+            System.out.println("Digite a alternativa correta: ");
+            resposta = (String) sc.nextLine();
+            if (questoes5.iscorreta(resposta)){
+                acertos = acertos+1;
+            }
+
+            System.out.println("ACERTOS: "+acertos);
+
+            System.out.println("====================================================================== ");
+            questoes questoes6 = new questoes();
+            questoes6.questoes = "6- Qual é a estrela mais brilhante no céu noturno??";
+            questoes6.A = "A) Alfa Centauri";
+            questoes6.B = "B) Proxima Centauri";
+            questoes6.C = "C) Rigel";
+            questoes6.D = "D) Sirius";
+            questoes6.E = "E) Betelgeuse";
+            questoes6.escrevaquestao();
+            questoes6.correta = "D";
+            System.out.println("Digite a alternativa correta: ");
+            resposta = (String) sc.nextLine();
+            if (questoes6.iscorreta(resposta)){
+                acertos = acertos+1;
+            }
+
+            System.out.println("ACERTOS: "+acertos);
+
+            System.out.println("====================================================================== ");
+            questoes questoes7 = new questoes();
+            questoes7.questoes = "7- Qual é a temperatura média da superfície do Sol?";
+            questoes7.A = "A) 200°C";
+            questoes7.B = "B) 1.000°C";
+            questoes7.C = "C) 5.000°C";
+            questoes7.D = "D) 10.000°C";
+            questoes7.E = "E) 15.000°C";
+            questoes7.escrevaquestao();
+            questoes7.correta = "C";
+            System.out.println("Digite a alternativa correta: ");
+            resposta = (String) sc.nextLine();
+            if (questoes7.iscorreta(resposta)){
+                acertos = acertos+1;
+            }
+
+            System.out.println("ACERTOS: "+acertos);
+
+            System.out.println("====================================================================== ");
+            questoes questoes8 = new questoes();
+            questoes8.questoes = "8- O que é uma supernova?";
+            questoes8.A = "A) Uma explosão de uma estrela";
+            questoes8.B = "B) Uma órbita especial dos planetas";
+            questoes8.C = "C) Uma lua em colapso";
+            questoes8.D = "D) Uma galáxia em fusão";
+            questoes8.E = "E) Uma estrela em expansão";
+            questoes8.escrevaquestao();
+            questoes8.correta = "A";
+            System.out.println("Digite a alternativa correta: ");
+            resposta = (String) sc.nextLine();
+            if (questoes8.iscorreta(resposta)){
+                acertos = acertos+1;
+            }
+
+            System.out.println("ACERTOS: "+acertos);
+
+            System.out.println("====================================================================== ");
+            questoes questoes9 = new questoes();
+            questoes9.questoes = "Qual é a constelação que contém a estrela Polaris, a Estrela do Norte?";
+            questoes9.A = "A) Ursa Maior";
+            questoes9.B = "B) Ursa Menor";
+            questoes9.C = "C) Orion";
+            questoes9.D = "D) Cassiopeia";
+            questoes9.E = "E) Centauro";
+            questoes9.escrevaquestao();
+            questoes9.correta = "B";
+            System.out.println("Digite a alternativa correta: ");
+            resposta = (String) sc.nextLine();
+            if (questoes9.iscorreta(resposta)){
+                acertos = acertos+1;
+            }
+
+            System.out.println("ACERTOS: "+acertos);
+
+            System.out.println("====================================================================== ");
+            questoes questoes10 = new questoes();
+            questoes10.questoes = "10- Qual é o menor planeta do sistema solar?";
+            questoes10.A = "A) Júpiter";
+            questoes10.B = "B) Saturno";
+            questoes10.C = "C) Plutão";
+            questoes10.D = "D) Mercúrio";
+            questoes10.E = "E) Netuno";
+            questoes10.escrevaquestao();
+            questoes10.correta = "D";
+            System.out.println("Digite a alternativa correta: ");
+            resposta = (String) sc.nextLine();
+            if (questoes10.iscorreta(resposta)){
+                acertos = acertos+1;
+            }
+
+            System.out.println("ACERTOS: "+acertos);
+
+            System.out.println("====================================================================== ");
+            questoes questoes11 = new questoes();
+            questoes11.questoes = "11- ual é a idade aproximada do universo, de acordo com a teoria do Big Bang?";
+            questoes11.A = "A) 4 bilhões de anos";
+            questoes11.B = "B) 13,8 bilhões de anos";
+            questoes11.C = "C) 20 bilhões de anos";
+            questoes11.D = "D) 100 bilhões de anos";
+            questoes11.E = "E) 10 bilhões de anos";
+            questoes11.escrevaquestao();
+            questoes11.correta = "B";
+            System.out.println("Digite a alternativa correta: ");
+            resposta = (String) sc.nextLine();
+            if (questoes11.iscorreta(resposta)){
+                acertos = acertos+1;
+            }
+
+            System.out.println("ACERTOS: "+acertos);
+
+            System.out.println("====================================================================== ");
+            questoes questoes12 = new questoes();
+            questoes12.questoes = "12- Qual é o menor planeta do sistema solar Qual é o nome do telescópio espacial lançado pela NASA em 1990??";
+            questoes12.A = "A) Kepler";
+            questoes12.B = "B) Hubble";
+            questoes12.C = "C) Spitzer";
+            questoes12.D = "D) Chandra";
+            questoes12.E = "E) James Webb";
+            questoes12.escrevaquestao();
+            questoes12.correta = "B";
+            System.out.println("Digite a alternativa correta: ");
+            resposta = (String) sc.nextLine();
+            if (questoes12.iscorreta(resposta)){
+                acertos = acertos+1;
+            }
+
+            System.out.println("ACERTOS: "+acertos);
+
+            System.out.println("====================================================================== ");
+            questoes questoes13 = new questoes();
+            questoes13.questoes = "13- Qual é a única lua no sistema solar com uma atmosfera densa?";
+            questoes13.A = "A) Lua";
+            questoes13.B = "B) Europa";
+            questoes13.C = "C) Titã";
+            questoes13.D = "D) Ganímedes";
+            questoes13.E = "E) Deimos";
+            questoes13.escrevaquestao();
+            questoes13.correta = "C";
+            System.out.println("Digite a alternativa correta: ");
+            resposta = (String) sc.nextLine();
+            if (questoes13.iscorreta(resposta)){
+                acertos = acertos+1;
+            }
+
+            System.out.println("ACERTOS: "+acertos);
+
+            System.out.println("====================================================================== ");
+            questoes questoes14 = new questoes();
+            questoes14.questoes = "14- Qual é a velocidade aproximada da luz no vácuo?";
+            questoes14.A = "A) 300.000 km/s";
+            questoes14.B = "B) 150.000 km/s";
+            questoes14.C = "C) 450.000 km/s";
+            questoes14.D = "D) 600.000 km/s";
+            questoes14.E = "E) 750.000 km/s";
+            questoes14.escrevaquestao();
+            questoes14.correta = "A";
+            System.out.println("Digite a alternativa correta: ");
+            resposta = (String) sc.nextLine();
+            if (questoes14.iscorreta(resposta)){
+                acertos = acertos+1;
+            }
+
+            System.out.println("ACERTOS: "+acertos);
+
+            System.out.println("====================================================================== ");
+            questoes questoes15 = new questoes();
+            questoes15.questoes = "15- Qual é a distância média entre a Terra e o Sol, em unidades astronômicas (UA)?";
+            questoes15.A = "A) 93 milhões de km";
+            questoes15.B = "B) 150 milhões de km";
+            questoes15.C = "C) 100 milhões de km";
+            questoes15.D = "D) 75 milhões de km";
+            questoes15.E = "E) 200 milhões de km";
+            questoes15.escrevaquestao();
+            questoes15.correta = "A";
+            System.out.println("Digite a alternativa correta: ");
+            resposta = (String) sc.nextLine();
+            if (questoes15.iscorreta(resposta)){
+                acertos = acertos+1;
+            }
+
+            System.out.println("ACERTOS: "+acertos);
+        }
+    }
+}
